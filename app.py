@@ -32,7 +32,7 @@ def predict():
         'humidity': [humidity],
         'sunHour': [sunHour],
         'HeatIndexC': [HeatIndexC],
-        'precipMM': [precipMM],
+        'precipMM': [precpMM],
         'pressure': [pressure],
         'windspeedKmph': [windspeedKmph]
     })
