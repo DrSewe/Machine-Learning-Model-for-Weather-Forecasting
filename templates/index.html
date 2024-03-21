@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            width: 45%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .form-group input[type="number"] {
+            width: 45%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Prediction Form</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="maxtempC">Max Temperature (C):</label>
+                <input type="number" id="maxtempC" name="maxtempC" required>
+            </div>
+            <div class="form-group">
+                <label for="mintempC">Min Temperature (C):</label>
+                <input type="number" id="mintempC" name="mintempC" required>
+            </div>
+            <div class="form-group">
+                <label for="cloudcover">Cloud Cover:</label>
+                <input type="number" id="cloudcover" name="cloudcover" required>
+            </div>
+            <div class="form-group">
+                <label for="humidity">Humidity:</label>
+                <input type="number" id="humidity" name="humidity" required>
+            </div>
+            <div class="form-group">
+                <label for="sunHour">Sun Hours:</label>
+                <input type="number" id="sunHour" name="sunHour" required>
+            </div>
+            <div class="form-group">
+                <label for="HeatIndexC">Heat Index (C):</label>
+                <input type="number" id="HeatIndexC" name="HeatIndexC" required>
+            </div>
+            <div class="form-group">
+                <label for="precipMM">Precipitation (mm):</label>
+                <input type="number" id="precipMM" name="precipMM" required>
+            </div>
+            <div class="form-group">
+                <label for="pressure">Pressure (mb):</label>
+                <input type="number" id="pressure" name="pressure" required>
+            </div>
+            <div class="form-group">
+                <label for="windspeedKmph">Wind Speed (Kmph):</label>
+                <input type="number" id="windspeedKmph" name="windspeedKmph" required>
+            </div>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
